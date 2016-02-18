@@ -138,6 +138,11 @@ class MenuController
     puts "#{entry.name} has been deleted"
   end
 
+  def annihilate_entries
+    @address_book.entries = []
+    puts "All entries have been annihilated"
+  end
+
   def edit_entry(entry)
     print "Updated name: "
     name = gets.chomp
