@@ -163,6 +163,7 @@ class MenuController
   def entry_submenu(entry)
     puts "n - next entry"
     puts "d - delete entry"
+    puts "a - delete all entries"
     puts "e - edit this entry"
     puts "m - return to main menu"
 
@@ -172,6 +173,9 @@ class MenuController
     when "n"
     when "d"
       delete_entry(entry)
+    when "a"
+      annihilate_entries
+      main_menu
     when "e"
       edit_entry(entry)
       entry_submenu(entry)
